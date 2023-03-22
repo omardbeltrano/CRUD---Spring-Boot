@@ -35,6 +35,11 @@ public class Todo {
 		this.task = task;
 		this.dateTask = dateTask;
 	}
+	
+	public Todo(String task, Date dateTask) {
+		this.task = task;
+		this.dateTask = dateTask;
+	}
 
 	public Long getId() {
 		return Id;
