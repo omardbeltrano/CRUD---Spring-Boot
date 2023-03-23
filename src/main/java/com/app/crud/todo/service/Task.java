@@ -6,4 +6,6 @@ import com.app.crud.todo.entity.Todo;
 
 public interface Task {
 	public List<Todo> allTasks();
+	
+	public Todo createNewTask(Todo todo);
 }

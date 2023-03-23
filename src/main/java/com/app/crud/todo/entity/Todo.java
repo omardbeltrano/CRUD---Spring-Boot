@@ -21,24 +21,29 @@ public class Todo {
 	@Column(name = "task", nullable = false, length = 50)
 	private String task;
 	
-	@Column(name = "date_task", nullable = false)
+	@Column(name = "description", nullable = false, length = 100)
 	//Pay attention with type of date's library
-	private Date dateTask;
+	private String description ;
+	
+	@Column(name = "date", nullable = false)
+	private String date;
 	
 	//Empty constructor to Java beans
 	public Todo() {
 		
 	}
 
-	public Todo(Long id, String task, Date dateTask) {
+	public Todo(Long id, String task, String description, String date) {
 		Id = id;
 		this.task = task;
-		this.dateTask = dateTask;
+		this.description = description;
+		this.date = date;
 	}
 	
-	public Todo(String task, Date dateTask) {
+	public Todo(String task, String description, String date) {
 		this.task = task;
-		this.dateTask = dateTask;
+		this.description = description;
+		this.date = date;
 	}
 
 	public Long getId() {
@@ -57,17 +62,25 @@ public class Todo {
 		this.task = task;
 	}
 
-	public Date getDateTask() {
-		return dateTask;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDateTask(Date dateTask) {
-		this.dateTask = dateTask;
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
 	}
 
 	@Override
 	public String toString() {
-		return "Todo [Id=" + Id + ", task=" + task + ", dateTask=" + dateTask + "]";
+		return "Todo [Id=" + Id + ", task=" + task + ", description=" + description + "date" + date + "]";
 	}
 	
 	

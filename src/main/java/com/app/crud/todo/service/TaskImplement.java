@@ -11,7 +11,7 @@ import com.app.crud.todo.repository.TaskRepository;
 @Service
 public class TaskImplement implements Task {
 
-	//Iny ection of repository
+	//Injection of repository
 	@Autowired
 	private TaskRepository taskRepository;
 
@@ -20,6 +20,13 @@ public class TaskImplement implements Task {
 		//Return repository injection with findall() method witch come from JpaRepository extensions
 		return taskRepository.findAll();
 	}
+
+	@Override
+	public Todo createNewTask(Todo todo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 	
 	
 }
